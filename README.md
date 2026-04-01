@@ -1,0 +1,1 @@
+# solace-admin-read-mcp

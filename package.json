@@ -1,0 +1,35 @@
+{
+  "name": "solace-admin-read-mcp",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "solace-admin-read-mcp": "./dist/server.js"
+  },
+  "scripts": {
+    "build": "tsup src/server.ts --format esm --dts --outDir dist",
+    "dev": "tsx src/server.ts",
+    "dev:http": "TRANSPORT=http tsx src/server.ts",
+    "start": "node dist/server.js",
+    "start:http": "TRANSPORT=http node dist/server.js"
+  },
+  "dependencies": {
+    "@cfworker/json-schema": "^4.1.1",
+    "@modelcontextprotocol/node": "latest",
+    "@modelcontextprotocol/server": "latest",
+    "axios": "^1.7.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^8.0.0",
+    "minimatch": "^10.0.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
